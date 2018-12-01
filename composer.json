@@ -1,0 +1,19 @@
+{
+    "name": "munxalipay/form",
+    "description": "阿里支付和退款",
+    "authors": [
+        {
+            "name": "munx",
+            "email": "munxmayun@163.com"
+        }
+    ],
+    "license": "MIT",
+    "require": {
+        "php": ">=5.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "alipay\\": "src/"
+        }
+    }
+}
