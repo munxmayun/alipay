@@ -1,0 +1,21 @@
+{
+    "name": "munxmayun/alipay",
+    "description": "alipay sdk",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "munx",
+            "email": "munxmayun@163.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php" : ">=5.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "HelloWorld\\" : "src/"
+        }
+    }
+}
