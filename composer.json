@@ -15,7 +15,7 @@
     },
     "autoload": {
         "psr-4": {
-            "HelloWorld\\" : "src/"
+            "munxmayun\\alipay\\" : "src/"
         }
     }
 }
