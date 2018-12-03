@@ -1,6 +1,6 @@
 <?php
 
-namespace alipay;
+namespace munxmayun\alipay;
 
 class Alipay {
 
@@ -15,15 +15,14 @@ class Alipay {
     protected $orderName;
 
     public function alipay() {
-        $param = input('post.');
         $aliPay = new Alipay();
-        $aliPay->setAppid('2018110562010220');
-        $aliPay->setReturnUrl('https://www.fdimall.com');
-        $aliPay->setNotifyUrl('http://www.fdimall.com');
-        $aliPay->setRsaPrivateKey('MIIEpAIBAAKCAQEA+T5mYrLnvLqMlT8zkTc5CvCxJ6+otWqsBhsEQizWCTVbnDkFJ5vlK+s7JYddV68NdML+JGxdRQ0aW57rWek/1XXFInEjHzppWXF8MQjtJqae010n5AQZU2NciB2nfqeyfoVMCFOtYrT73IePlvzULUPJfPq1sZlc0Qm85Bd1EXmJCwvtWI7zRv1iPLNVlpkfi7qJPRPug+9KsK65/PBsyCwWkEAt0+sD+AtfcxkwY5CPYtAMp8VA/XoR/CwAXQoXBJhkf7C/45lWHwVaZBFpYu9/T+Cj9a0RXfUevTUbXNKqGrBC/LMJTzi/g6aq6qb7SgZs8dwTaC4GTZMpciYrcwIDAQABAoIBAHz3T2hvIQecVP5DqPxHPt+AXKJ0TVdge424IAN57XrCeQM0B6SbYmUJ1Sb03tUm3M1NMxVaC82iSzPi00fKTgoduVCSfzSaGdYRs132hskZQ4rgKy8E6xnHOM66Z492T2VmOf/2zHkwGxOwGEtwyoVDdpOmNFEufr4EbuPB6x1t3/3mW9pYaNiMTm/pri3FV+6STn7gO46I00Or2z9xODg2v78GKct7hxyF0Kan0nMuvWCjh1lbxkaF4FctMSBKOHTejtyN0DzF4igzlpuEsIxIJH6LyvgEBmUQT/rXbzZO1qowKp5U0weUYS0/z1XDhFTq2srahTfA2z8IWqdeyKkCgYEA/Y5LrV+sIc0K0xBQG3Uqcn2kLUkzfft9WKM4SDViBwmcts6jhBzcFKZB3PFU5/ahsBUnWH/YF9wELom1E305eRvrDFwKaehG+LZv94yZ4+v2ECSpk9dMbgGQ/iDkFJ75hhy3aviqMih9zVyVebbavKWmHfkRNJUV5uw9YSFInqcCgYEA+6V2mtLjTr75Ln6ufHFiyhmbsQcHXf4XirntlzxUcZ8/sntA3VcQiP5u6pDYncJB1TQVEyKgrjw8jHwu83AvSRzIRYinLcy3QdIG7n/3IptQN+seDt2mqsD1N1/TNBYgR3ix7tDUW72o04WWBZmmIYwxIRf+EElh4PHxxgsIUlUCgYEA+RpNWx19PQ/2rHmAWhl4BFdPbnZWMlVbRjPE3ZwknIli/25v0yGPTnIwjuJB6kqxew6tQxMGuBoduaLs1SLXzhYRjGj4iif7YenKgsgNgJCXhDCgsXB51DGRwzmJGoE83/dic6Otge2p+pIVACkXKPMNCrFhp+k4RVCe1MggUk0CgYAib1nzhbglJmzit+MYlEt4bFipuNSBQCvoh9jDQTYs9iW5PrR5lVhl5qs23etGazam/iGEJNDoBsYiUzv5g/h0gMPHABQgaEsLbroUGN6wlaA8hqfuUNZlt1HW6f30urJgFVwD2f+1LhbUGwuUaJobLRvr82SIxgHmzjTPbOMOoQKBgQCEdricWhQDBWjyw4b138iL6k9FME7rmFOxkvoD4QfKJO9xvNMLzdIyLPSsZi3rYX3USeyhflaklP193b56/yu6d/cbXHTBo3XkfJ/LGEvi9FAo/nsZZQG5AS94P+8GFE3f3i3haEFofA5nPfeXr1K+omt0ENocIh+0HKRsBUhQQg==');
-        $aliPay->setTotalFee($param['total_amount']);
-        $aliPay->setOutTradeNo($param['out_trade_no']);
-        $aliPay->setOrderName($param['subject']);
+        $aliPay->setAppid('appid');
+        $aliPay->setReturnUrl('返回路径');
+        $aliPay->setNotifyUrl('消息路口');
+        $aliPay->setRsaPrivateKey('私钥');
+        $aliPay->setTotalFee('金额');
+        $aliPay->setOutTradeNo('订单编号');
+        $aliPay->setOrderName('订单名称');
         $sHtml = $aliPay->doPay();
         echo $sHtml;
     }
